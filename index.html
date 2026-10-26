@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wedding Invitation</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="locked">
+    <canvas id="petals-canvas"></canvas>
+    <!-- Cover -->
+    <div id="cover">
+      <div class="cover-card text-center">
+        <p class="sub-title mb-2">The Wedding Celebration Of</p>
+        <h1 class="font-script cover-names">Romeo &amp; Juliet</h1>
+        <p class="text-muted small mb-3">Minggu, 15 November 2026</p>
+
+        <div class="guest-box">
+          <small class="text-muted d-block"
+            >Kepada Yth. Bapak/Ibu/Saudara/i:</small
+          >
+          <h4 class="fw-bold mb-0 mt-1" id="guest-name">Tamu Undangan</h4>
+        </div>
+
+        <p class="small text-muted mb-4">
+          Tanpa mengurangi rasa hormat, kami mengundang Anda untuk hadir di
+          momen bahagia kami.
+        </p>
+
+        <button class="btn btn-open" id="btn-open-invitation">
+          <i class="bi bi-envelope-open-heart me-2"></i> Buka Undangan
+        </button>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="side-nav">
+      <a href="#hero" title="Beranda"><i class="bi bi-house-heart"></i></a>
+      <a href="#couple" title="Mempelai"><i class="bi bi-people"></i></a>
+      <a href="#event" title="Acara"><i class="bi bi-calendar-event"></i></a>
+      <a href="#rsvp" title="RSVP &amp; Ucapan"
+        ><i class="bi bi-chat-heart"></i
+      ></a>
+      <a href="#gift" title="Hadiah"><i class="bi bi-gift"></i></a>
+    </nav>
+
+    <header id="hero" class="hero-section">
+      <div class="hero-content">
+        <p class="sub-title">Walimatul 'Ursy</p>
+        <h1 class="font-script">Romeo &amp; Juliet</h1>
+        <div class="divider-ornament">
+          <span></span><i class="bi bi-heart-fill"></i><span></span>
+        </div>
+        <p class="hero-date">15 . 11 . 2026</p>
+        <p class="fst-italic text-muted max-w-md mx-auto">
+          <q
+            >Dan di antara tanda-tanda kebesaran-Nya ialah Dia menciptakan
+            pasangan-pasangan untukmu dari jenismu sendiri agar kamu merasa
+            tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan kasih
+            sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat
+            tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.</q
+          >
+          <br /><cite class="small text-secondary-emphasis"
+            >(QS. Ar-Rum: 21)</cite
+          >
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section id="couple" class="py-5">
+        <div class="container">
+          <div class="text-center mb-5">
+            <p class="sub-title">Pasangan Mempelai</p>
+            <h2 class="font-serif">Groom &amp; Bride</h2>
+            <div class="divider-ornament">
+              <span></span><i class="bi bi-flower1"></i><span></span>
+            </div>
+            <p class="text-muted col-md-8 mx-auto">
+              Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud
+              melangsungkan pernikahan putra dan putri kami:
+            </p>
+          </div>
+
+          <div class="row align-items-center g-4">
+            <!-- Groom -->
+            <div class="col-md-5">
+              <div class="couple-card text-center">
+                <figure class="avatar-frame">
+                  <img src="img/rover.jpg" alt="Foto Romeo Pratama" />
+                  <figcaption class="visually-hidden">Romeo</figcaption>
+                </figure>
+                <h3 class="font-script couple-name">Romeo, S.Kom.</h3>
+                <p class="small text-muted mb-2">Putra pertama dari:</p>
+                <p class="fw-semibold mb-3">Bpk. Lidar &amp; Ibu Dalia</p>
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  class="btn btn-outline-theme btn-sm"
+                >
+                  <i class="bi bi-instagram me-1"></i> @romeo_123
+                </a>
+              </div>
+            </div>
+
+            <div class="col-md-2 text-center ampersand my-2">&amp;</div>
+
+            <!-- Bride -->
+            <div class="col-md-5">
+              <div class="couple-card text-center">
+                <figure class="avatar-frame">
+                  <img src="img/Shorekeeper.jpg" alt="Foto Juliet Anggraini" />
+                  <figcaption class="visually-hidden">
+                    Juliet Anggraini
+                  </figcaption>
+                </figure>
+                <h3 class="font-script couple-name">Juliet, S.Si.</h3>
+                <p class="small text-muted mb-2">Putri bungsu dari:</p>
+                <p class="fw-semibold mb-3">Bpk. Agus &amp; Ibu Lily</p>
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  class="btn btn-outline-theme btn-sm"
+                >
+                  <i class="bi bi-instagram me-1"></i> @juliet_123
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Countdown -->
+      <section class="py-4">
+        <div class="container">
+          <div class="countdown-box text-center">
+            <h3 class="font-serif text-white mb-2">Menghitung Hari</h3>
+            <p class="text-white-50 mb-4">
+              Kami tak sabar menyambut hari bahagia kami bersama Anda
+            </p>
+
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+              <div class="timer-item">
+                <span class="timer-num" id="days">00</span>
+                <span class="timer-label">Hari</span>
+              </div>
+              <div class="timer-item">
+                <span class="timer-num" id="hours">00</span>
+                <span class="timer-label">Jam</span>
+              </div>
+              <div class="timer-item">
+                <span class="timer-num" id="minutes">00</span>
+                <span class="timer-label">Menit</span>
+              </div>
+              <div class="timer-item">
+                <span class="timer-num" id="seconds">00</span>
+                <span class="timer-label">Detik</span>
+              </div>
+            </div>
+
+            <div class="mt-4">
+              <a
+                href="https://calendar.google.com"
+                target="_blank"
+                class="btn btn-light rounded-pill px-4 py-2 fw-semibold shadow-sm"
+              >
+                <i class="bi bi-calendar-plus me-2 text-danger"></i> Simpan ke
+                Google Calendar
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tabel Acara -->
+      <section id="event" class="py-5">
+        <div class="container">
+          <div class="text-center mb-5">
+            <p class="sub-title">Waktu &amp; Lokasi</p>
+            <h2 class="font-serif">Rangkaian Acara</h2>
+            <div class="divider-ornament">
+              <span></span><i class="bi bi-calendar4-week"></i><span></span>
+            </div>
+          </div>
+
+          <div class="row g-4 mb-5">
+            <!-- Akad Nikah -->
+            <div class="col-md-6">
+              <div class="event-card">
+                <div class="event-icon"><i class="bi bi-flower1"></i></div>
+                <h3 class="font-serif mb-2">Akad Nikah</h3>
+                <p class="text-muted">
+                  <i class="bi bi-calendar3 me-2"></i>Minggu, 15 November 2026
+                </p>
+                <p class="text-muted">
+                  <i class="bi bi-clock me-2"></i>Pukul 08.00 - 10.00 WIB
+                </p>
+                <hr />
+                <p class="fw-semibold mb-1">
+                  <i class="bi bi-geo-alt-fill text-danger me-1"></i> Gedung
+                  Menara Putih
+                </p>
+                <p class="small text-muted mb-4">
+                  Jl. Citra Harmoni, Surabaya, Jawa Timur
+                </p>
+                <a
+                  href="https://maps.google.com"
+                  target="_blank"
+                  class="btn btn-primary-theme"
+                >
+                  <i class="bi bi-geo-alt me-1"></i> Buka Google Maps
+                </a>
+              </div>
+            </div>
+
+            <!-- Resepsi -->
+            <div class="col-md-6">
+              <div class="event-card">
+                <div class="event-icon"><i class="bi bi-cup-hot"></i></div>
+                <h3 class="font-serif mb-2">Resepsi Pernikahan</h3>
+                <p class="text-muted">
+                  <i class="bi bi-calendar3 me-2"></i>Minggu, 15 November 2026
+                </p>
+                <p class="text-muted">
+                  <i class="bi bi-clock me-2"></i>Pukul 11.00 - 14.00 WIB
+                </p>
+                <hr />
+                <p class="fw-semibold mb-1">
+                  <i class="bi bi-geo-alt-fill text-danger me-1"></i> Grand Hall
+                  Avinoleum
+                </p>
+                <p class="small text-muted mb-4">
+                  Jl. Anggrek, Surabaya, Jawa Timur
+                </p>
+                <a
+                  href="https://maps.google.com"
+                  target="_blank"
+                  class="btn btn-primary-theme"
+                >
+                  <i class="bi bi-geo-alt me-1"></i> Buka Google Maps
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Rundown Acara -->
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="card p-3 shadow-sm border-0 rounded-4">
+                <h5 class="font-serif text-center mb-3">Jadwal Kegiatan</h5>
+                <div class="table-responsive">
+                  <table
+                    class="table table-hover custom-table align-middle text-center mb-0"
+                  >
+                    <caption>
+                      * Tamu diharapkan hadir 10 menit sebelum acara dimulai.
+                    </caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">Waktu</th>
+                        <th scope="col">Kegiatan</th>
+                        <th scope="col">Tempat</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><b>08:00 - 09:30</b></td>
+                        <td>Akad Nikah &amp; Ijab Qabul</td>
+                        <td>Hall Menara Putih</td>
+                      </tr>
+                      <tr>
+                        <td><b>09:30 - 10:30</b></td>
+                        <td>Sesi Foto Bersama Keluarga Inti</td>
+                        <td>Pelaminan Utama</td>
+                      </tr>
+                      <tr>
+                        <td><b>11:00 - 14:00</b></td>
+                        <td>Resepsi Pernikahan &amp; Ramah Tamah</td>
+                        <td>Grand Hall</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-4">
+            <div class="col-lg-8 mx-auto">
+              <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow-sm">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126646.20786523916!2d112.67383794354247!3d-7.275619502931149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fbf8381ac015%3A0x3027a76e352be40!2sSurabaya%2C%20East%20Java!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="Peta Lokasi Pernikahan"
+                >
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RSVP -->
+      <section id="rsvp" class="py-5">
+        <div class="container">
+          <div class="text-center mb-5">
+            <p class="sub-title">Konfirmasi &amp; Doa Restu</p>
+            <h2 class="font-serif">RSVP &amp; Ucapan</h2>
+            <div class="divider-ornament">
+              <span></span><i class="bi bi-chat-quote"></i><span></span>
+            </div>
+            <p class="text-muted">
+              Mohon konfirmasi kehadiran serta kirimkan doa terbaik Anda untuk
+              kami.
+            </p>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="form-card">
+                <form id="rsvp-form">
+                  <fieldset>
+                    <legend class="font-serif fs-5 mb-3 text-primary-emphasis">
+                      Buku Tamu &amp; Kehadiran
+                    </legend>
+
+                    <div class="mb-3">
+                      <label for="input-nama" class="form-label"
+                        >Nama Lengkap <span class="text-danger">*</span></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="input-nama"
+                        placeholder="Masukkan nama Anda"
+                        required
+                        maxlength="50"
+                      />
+                    </div>
+
+                    <div class="mb-3">
+                      <label class="form-label d-block"
+                        >Konfirmasi Kehadiran
+                        <span class="text-danger">*</span></label
+                      >
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="status-hadir"
+                          id="status-hadir"
+                          value="Hadir"
+                          checked
+                        />
+                        <label class="form-check-label" for="status-hadir"
+                          >Hadir</label
+                        >
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="status-hadir"
+                          id="status-ragu"
+                          value="Ragu-ragu"
+                        />
+                        <label class="form-check-label" for="status-ragu"
+                          >Ragu-ragu</label
+                        >
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="status-hadir"
+                          id="status-absen"
+                          value="Tidak Hadir"
+                        />
+                        <label class="form-check-label" for="status-absen"
+                          >Tidak Hadir</label
+                        >
+                      </div>
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="select-jumlah" class="form-label"
+                        >Jumlah Tamu</label
+                      >
+                      <select class="form-select" id="select-jumlah">
+                        <option value="1">1 Orang</option>
+                        <option value="2">2 Orang</option>
+                        <option value="3">3 Orang</option>
+                        <option value="4+">Lebih dari 3 Orang</option>
+                      </select>
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="input-pesan" class="form-label"
+                        >Ucapan &amp; Doa Restu
+                        <span class="text-danger">*</span></label
+                      >
+                      <textarea
+                        class="form-control"
+                        id="input-pesan"
+                        rows="3"
+                        placeholder="Tuliskan ucapan dan doa untuk kedua mempelai..."
+                        required
+                      ></textarea>
+                    </div>
+
+                    <div class="d-flex gap-2">
+                      <button
+                        type="submit"
+                        class="btn btn-primary-theme flex-grow-1"
+                      >
+                        <i class="bi bi-send-fill me-1"></i> Kirim Ucapan
+                      </button>
+                      <button type="reset" class="btn btn-outline-secondary">
+                        <i class="bi bi-arrow-counterclockwise"></i>
+                      </button>
+                    </div>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="form-card h-100 d-flex flex-column">
+                <h5
+                  class="font-serif mb-3 d-flex align-items-center justify-content-between"
+                >
+                  <span>Ucapan &amp; Doa</span>
+                  <span
+                    class="badge bg-secondary rounded-pill"
+                    id="wishes-counter"
+                    >3 Pesan</span
+                  >
+                </h5>
+
+                <div
+                  class="wishes-container flex-grow-1"
+                  id="wishes-list"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Wedding Gift -->
+      <section id="gift" class="py-5">
+        <div class="container">
+          <div class="text-center mb-5">
+            <p class="sub-title">Tanda Kasih</p>
+            <h2 class="font-serif">Kado &amp; Amplop Digital</h2>
+            <div class="divider-ornament">
+              <span></span><i class="bi bi-gift-fill"></i><span></span>
+            </div>
+            <p class="text-muted col-md-7 mx-auto">
+              Doa restu Anda merupakan karunia terindah bagi kami. Namun jika
+              memberi adalah ungkapan tanda kasih Anda, kami menyediakan dompet
+              digital berikut:
+            </p>
+          </div>
+
+          <div class="row g-4 justify-content-center">
+            <div class="col-md-5">
+              <div class="gift-card">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <span class="bank-name">BANK BNI</span>
+                  <i class="bi bi-credit-card-2-front fs-3 text-warning"></i>
+                </div>
+                <p class="small text-white-50 mb-1">Nomor Rekening:</p>
+                <p class="account-number mb-2" id="acc-bca">987654321</p>
+                <p class="small mb-3">a/n <b>Romeo</b></p>
+                <button
+                  class="btn btn-copy"
+                  onclick="copyToClipboard('987654321', this)"
+                >
+                  <i class="bi bi-clipboard me-1"></i> Salin No. Rekening
+                </button>
+              </div>
+            </div>
+
+            <div class="col-md-5">
+              <div class="gift-card">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <span class="bank-name">BANK MANDIRI</span>
+                  <i class="bi bi-credit-card-2-front fs-3 text-info"></i>
+                </div>
+                <p class="small text-white-50 mb-1">Nomor Rekening:</p>
+                <p class="account-number mb-2" id="acc-mandiri">123456789</p>
+                <p class="small mb-3">a/n <b>Juliet</b></p>
+                <button
+                  class="btn btn-copy"
+                  onclick="copyToClipboard('123456789', this)"
+                >
+                  <i class="bi bi-clipboard me-1"></i> Salin No. Rekening
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-4">
+            <div class="col-md-8 mx-auto">
+              <details class="p-3 bg-white rounded-3 border">
+                <summary
+                  class="fw-semibold text-secondary-emphasis cursor-pointer"
+                >
+                  <i class="bi bi-box2-heart me-2"></i> Kirim Kado Fisik ke
+                  Alamat Kami
+                </summary>
+                <div class="mt-3 ps-3 border-start border-3 border-danger">
+                  <p class="mb-1"><b>Penerima:</b> Romeo &amp; Juliet</p>
+                  <p class="mb-1"><b>No. HP:</b> 0812-3456-7890</p>
+                  <p class="mb-0 text-muted">
+                    Jl. Ragunna Square, Surabaya, Jawa Timur
+                  </p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-5 bg-white border-top">
+      <div class="container">
+        <h3 class="font-script fs-1 mb-2">Romeo &amp; Juliet</h3>
+        <p class="small text-muted mb-3">
+          Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila
+          Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.
+        </p>
+        <div class="divider-ornament">
+          <span></span><i class="bi bi-hearts"></i><span></span>
+        </div>
+        <p class="small text-muted mb-0">
+          &copy; 2026 Romeo &amp; Juliet Wedding. Made with
+          <i class="bi bi-heart-fill text-danger"></i>.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Javascript -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
